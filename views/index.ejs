@@ -22,7 +22,9 @@
     <main role="main" class="flex-shrink-0">
         <%- include("./components/nav") %>
         <div class="page-content" style="padding: 0.14rem 1rem">
+            <hr />
             <h1 style="font-size: 1.84rem"><%= gstate.setting_page.label %></h1>
+            <hr />
             <%- include(`./settings_components/${gstate.setting_page.id}`) %>
         </div>
     </main>
