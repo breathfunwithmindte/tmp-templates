@@ -22,17 +22,15 @@
     <main role="main" class="flex-shrink-0">
         <nav class="nav">
             <ul>
-                <li> <a class="nav-link active" href="#">Δημιουργία χρήστη</a> </li>
-                <li> <a class="nav-link active" href="#">Δημιουργία δημοπρασίας</a> </li>
-                <li> <a class="nav-link active" href="#">Δημιουργία ομάδας</a> </li>
-                <li> <a class="nav-link active" href="#">Διαχείρηση χρηστών</a> </li>
-                <li> <a class="nav-link active" href="#">Δημοπρασίες</a> </li>
-                <li> <a class="nav-link active" href="#">Διαχείρηση πεδίων δημοπρασίας</a> </li>
-                <li> <a class="nav-link active" href="#">Αυτοματισμοί</a> </li>
-                <li> <a class="nav-link active" href="#">Integrations</a> </li>
-                <li> <a class="nav-link active" href="#">Γενικα Ρυθμίσεις</a> </li>
-                <li> <a class="nav-link active" href="#">Όροι και προυποθέσεις</a> </li>
-                <li> <a class="nav-link active" href="#">Αίτηση</a> </li>
+                <% for( let i = 0; i < gstate.setting_pages.length; i++ ) { %>
+                    <li> 
+                        <a 
+                            class="nav-link <%= gstate.setting_page.id === gstate.setting_pages[i].id ? "disabled" : "active"  %>" 
+                            href="<%= gstate.setting_pages[i].path  %>">
+                            <%= gstate.setting_pages[i].label  %>
+                        </a> 
+                    </li>
+                <% } %>
             </ul>
         </nav>
         <div class="page-content">
