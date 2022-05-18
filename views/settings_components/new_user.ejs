@@ -2,8 +2,13 @@
 
 </style>
 
-
+<div>
+    <%- include("../components/form", { formname: "newuser__", formsubmit: "Δημιουργία Χρήστη", inputs: [
+        { id: "email", type: "email", label: "Email", text: "Απαραίτητο πεδίο", required: true },
+        { id: "phonenumber", type: "number", label: "Κινητό", text: "Απαραίτητο πεδίο", required: true }
+    ] }) %>
+</div>
 
 <script>
-    
+
 </script>

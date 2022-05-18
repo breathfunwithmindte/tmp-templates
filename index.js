@@ -13,12 +13,12 @@ const setting_pages = [
     { id: "users", path: "/admin/users/read", label: "Διαχείρηση χρηστών", view_component: "", controller: "" },
     { id: "groups", path: "/admin/users/read", label: "Διαχείρηση ομάδων", view_component: "", controller: "" },
     { id: "auctions", path: "/admin/auctions", label: "Δημοπρασίες", view_component: "", controller: "" },
-    { id: "auctions-fields", path: "/admin/auctions/fields/settings", label: "Διαχείρηση πεδίων δημοπρασίας", view_component: "", controller: "" },
+    { id: "auctions_fields", path: "/admin/auctions/fields/settings", label: "Διαχείρηση πεδίων δημοπρασίας", view_component: "", controller: "" },
     { id: "automations", path: "/admin/automations", label: "Αυτοματισμοί", view_component: "", controller: "" },
     { id: "intergrations", path: "/admin/intergrations", label: "Integrations", view_component: "", controller: "" },
     { id: "settings", path: "/admin/settings", label: "Γενικα Ρυθμίσεις", view_component: "", controller: "" },
     { id: "terms", path: "/admin/terms", label: "Όροι και προυποθέσεις", view_component: "", controller: "" },
-    { id: "support-new", path: "/admin/support/new", label: "Αίτηση", view_component: "", controller: "" }
+    { id: "support_new", path: "/admin/support/new", label: "Αίτηση", view_component: "", controller: "" }
 ]
 
 app.get("/", (req, res) => {

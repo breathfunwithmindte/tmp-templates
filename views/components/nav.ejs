@@ -1,0 +1,13 @@
+<nav class="nav">
+    <ul>
+        <% for( let i = 0; i < gstate.setting_pages.length; i++ ) { %>
+            <li> 
+                <a 
+                    class="nav-link <%= gstate.setting_page.id === gstate.setting_pages[i].id ? "disabled" : "active"  %>" 
+                    href="<%= gstate.setting_pages[i].path  %>">
+                    <%= gstate.setting_pages[i].label  %>
+                </a> 
+            </li>
+        <% } %>
+    </ul>
+</nav>

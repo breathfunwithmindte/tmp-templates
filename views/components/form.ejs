@@ -1,0 +1,28 @@
+<style>
+    .cform {
+        max-width: 693px;
+        padding: 1.5rem 0rem;
+    }
+
+</style>
+
+
+<form class="cform">
+    <% for( let i = 0; i < inputs.length; i++ ) { const inp = inputs[i] %>
+        <% if (["email", "text", "number"].some(s => inp.type === s)) { %>
+            <div class="form-group">
+                <label for="<%= formname %><%= inp.id %>"><%= inp.label %></label>
+                <input type="<%= inp.type %>" class="form-control" id="<%= formname %><%= inp.id %>" placeholder="Aa..." <%= inp.required ? "required=true" : ""  %> />
+                <small  class="form-text text-muted"><%= inp.text %></small>
+            </div>
+        <% } else if (inp.type === "radio") { %>
+            <h1>input not fdound</h1>
+        <% } %>
+    <% } %>
+    <button class="btn btn-primary" type="submit"><%= formsubmit %></button>
+</form>
+
+<script>
+    const inputs = "<%= inputs.map(i => { return `${i.type}::${i.id}` }).join(";") %>"
+    //alert(inputs)
+</script>
